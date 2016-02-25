@@ -28,7 +28,7 @@ sourceSets {
 }
 
 ext {	
-	moduleName="amc-demo";
+	moduleName="paas-be-amc";
 	moduleVersion="0.1-SNAPSHOT"
 	publishUserName = "devadm"
 	publishUserPassword = "Devadm@1212"
