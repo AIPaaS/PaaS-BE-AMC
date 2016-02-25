@@ -36,6 +36,8 @@ ext {
 	builtBy="gradle 2.3"
 }
 
+
+
 group = 'com.ai.aisse'
 
 dependencies{
