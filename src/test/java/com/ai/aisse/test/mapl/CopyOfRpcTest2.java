@@ -13,6 +13,7 @@ import com.ai.aisse.core.rest.IHistoryApi;
 import com.ai.aisse.core.rest.IHostApi;
 import com.ai.aisse.core.rest.IHostgroupApi;
 import com.ai.aisse.core.rest.IItemApi;
+import com.ai.aisse.core.rest.ITestHostApi;
 import com.ai.aisse.core.rest.UserTokenApi;
 import com.ai.aisse.core.vo.HistoryVo;
 import com.ai.aisse.core.vo.HostVo;
@@ -22,6 +23,7 @@ import com.ai.aisse.core.vo.ItemVo;
 import com.ai.aisse.core.vo.UserVo;
 import com.ai.aisse.test.springcontext.SpringContext;
 import com.alibaba.fastjson.JSONArray;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class CopyOfRpcTest2 {
 	
@@ -45,10 +47,13 @@ public static void demoTest(){
 	}*/
 	
 	//IItemApi object =(IItemApi) context.getBean("itemApiImpl");
-	IHistoryApi object =(IHistoryApi) context.getBean("historyApiImpl");
-	Object str = new ArrayList<HistoryVo>();
+	//IHistoryApi object =(IHistoryApi) context.getBean("historyApiImpl");
+	//Object str = new ArrayList<HistoryVo>();
+	 ITestHostApi object =(ITestHostApi) context.getBean("testHostApiImpl");
+	 Object str = new ArrayList<HostVo>();
+	  
 	try {
-		str =  object.getItemsByItemID("30444","3");
+		str =  object.getHostListByGroupID("17");
 		//str =  object.getItemsByHostID("10274");
 		System.out.println("-232323--我是结果："+str);
 	} catch (Exception e) {

@@ -5,16 +5,12 @@ import java.util.Map;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.mybatis.generator.codegen.ibatis2.sqlmap.elements.CountByExampleElementGenerator;
 import org.springframework.stereotype.Repository;
 
 import com.ai.aisse.core.constants.BaseinfoConstants;
-import com.ai.aisse.core.vo.InterfaceVo;
 import com.ai.aisse.utils.ZabbixApiUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.mysql.fabric.xmlrpc.base.Array;
 @Repository
 public class HostZabbixApi {
 

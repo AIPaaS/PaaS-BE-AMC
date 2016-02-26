@@ -21,7 +21,6 @@ public class HistoryZabbixApi {
 	public JSONArray getHistoyByItemID(String itemid,String value_type) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("output", "extend");
-		//params.put("limit", 10);
 		params.put("itemids", itemid);
 		params.put("history", value_type);
 		params.put("time_till", Math.round(System.currentTimeMillis()/1000));
