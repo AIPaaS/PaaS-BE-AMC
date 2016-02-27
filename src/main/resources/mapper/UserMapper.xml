@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
 <mapper namespace="userMapper">
-  	<resultMap id="User" type="com.ai.aisse.core.po.DemoTable">
+  	<resultMap id="User" type="com.ai.amc.core.po.DemoTable">
 		<result column="id" property="id" />
 		<result column="account" property="account" />
 		<result column="dname" property="dname" />

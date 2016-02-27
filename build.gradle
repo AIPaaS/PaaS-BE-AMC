@@ -38,7 +38,7 @@ ext {
 
 
 
-group = 'com.ai.aisse'
+group = 'com.ai.amc'
 
 dependencies{
     compile 'org.springframework:spring-jdbc:3.2.5.RELEASE'	
@@ -131,9 +131,9 @@ task publishJar(type:Jar){
 	version moduleVersion
 	baseName moduleName
 	from sourceSets.main.output	
-	include "com/ai/aisse/core/rest/*"
-	include "com/ai/aisse/core/vo/*"
-	include "com/ai/aisse/core/po/*"
+	include "com/ai/amc/core/rest/*"
+	include "com/ai/amc/core/vo/*"
+	include "com/ai/amc/core/po/*"
 	manifest {
 		attributes 'packageName': moduleName, 'Built-By': builtBy,'Built-date': new Date().format('yyyy-MM-dd HH:mm:ss'),'Manifest-Version':version
 	}

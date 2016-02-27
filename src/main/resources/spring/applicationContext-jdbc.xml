@@ -51,7 +51,7 @@
 	</bean>
     <!-- spring与mybatis整合配置，扫描所有dao -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.ai.aisse.core.dao" />
+		<property name="basePackage" value="com.ai.amc.core.dao" />
 	</bean>
 
 

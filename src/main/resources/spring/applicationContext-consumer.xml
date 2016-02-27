@@ -21,7 +21,7 @@
            http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd	">
         
-         <context:component-scan base-package="com.ai.aisse" />
+         <context:component-scan base-package="com.ai.amc" />
         
     <bean id="dubboConsumerConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="order" value="1"/>
@@ -32,7 +32,7 @@
     <!--  消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样  -->
     <dubbo:application name="${aisse.dubbo.appname}"/>
     <dubbo:registry protocol="${aisse.dubbo.registry.protocol}" address="${aisse.dubbo.registry.address}"/>
-    <dubbo:annotation package="com.ai.aisse.core.rest"/>
+    <dubbo:annotation package="com.ai.amc.core.rest"/>
 
     <!-- 数据源，事务配置 -->  
 	<import resource="applicationContext-jdbc.xml"/>

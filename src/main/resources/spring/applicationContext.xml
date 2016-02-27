@@ -18,7 +18,7 @@
      	   		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
            http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd	">
        
-     <context:component-scan base-package="com.ai.aisse" />
+     <context:component-scan base-package="com.ai.amc" />
        
     <!-- Dubbo Restful 服务注册 -->  
 	<import resource="applicationContext-dubbo.xml"/>
