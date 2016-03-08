@@ -14,13 +14,13 @@ import com.alibaba.fastjson.JSONArray;
 public class HistoryZabbixApi extends ZabbixApiBase {
 	private static final Logger logger = LogManager
 			.getLogger(HistoryZabbixApi.class.getName());
-	public JSONArray getHistoyByItemID(String itemid,String value_type) {
+	public JSONArray getHistoyByItemID(String itemid,String value_type,int time) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("output", "extend");
 		params.put("itemids", itemid);
 		params.put("history", value_type);
 		params.put("time_till", Math.round(System.currentTimeMillis()/1000));
-		params.put("time_from", Math.round(System.currentTimeMillis()/1000)-3600);
+		params.put("time_from", Math.round(System.currentTimeMillis()/1000)-time);
 		Map<String, Object> map = super.getConditions();
 		map.put("method", "history.get");
 		map.put("params", params);

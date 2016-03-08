@@ -46,6 +46,30 @@ public class ItemZabbixApi extends ZabbixApiBase{
 		return json;
 
 	}
+	/*
+	 * 获取模糊姓名匹配的所有item
+	 */
+	public JSONArray getItemListByName(String name) {
+		Map<String, Object> search = new HashMap<String, Object>();
+		search.put("name", name);
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("output", "extend");
+		params.put("search", search);
+		params.put("selectApplications", "extend");
+		Map<String, Object> map = super.getConditions();
+		map.put("method", "item.get");
+		map.put("params", params);
+		JSONArray json = null;
 
+		try {
+			json = super.getJSONArray(map);
+			logger.info("Item 的  ZabbixApi getItemListByHostID 返回成功");
+		} catch (Exception e) {
+			logger.info("Item 的  ZabbixApi getItemListByHostID返回失败"+e);
+			System.out.println("Host 的  ZabbixApi getItemListByHostID 返回失败");
+		}
+		return json;
+
+	}
 	
 }

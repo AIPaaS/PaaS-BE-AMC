@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ai.amc.core.constants.BaseinfoConstants;
 import com.ai.amc.core.dao.zabbixapi.HostgroupZabbixApi;
-import com.ai.amc.core.po.Hostgrouptype;
 import com.ai.amc.core.rest.IHostgroupApi;
 import com.ai.amc.core.service.IHostgroupSv;
 import com.ai.amc.core.vo.HostgroupVo;
@@ -35,11 +34,6 @@ public class HostgroupApiImpl implements IHostgroupApi {
 		
         
         return iHostgroupSv.getgroupByAuth();
-	}
-	@Override
-	public Hostgrouptype gettyprBygroupID(int groupid) {
-		 
-		return iHostgroupSv.gettyprBygroupID(groupid);
 	}
 	@Override
 	public List<HostgroupVo> getgroupByType() {

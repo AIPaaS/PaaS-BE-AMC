@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ai.amc.core.dao.mapper.HostgrouptypeMapper;
 import com.ai.amc.core.dao.zabbixapi.HostgroupZabbixApi;
-import com.ai.amc.core.po.Hostgrouptype;
 import com.ai.amc.core.service.IHostgroupSv;
 import com.ai.amc.core.vo.HostgroupVo;
 import com.alibaba.fastjson.JSON;
@@ -19,8 +17,6 @@ public class HostgroupSvImpl implements IHostgroupSv {
 
 	@Autowired
 	private HostgroupZabbixApi hostgroupZabbixApi;
-	@Autowired
-	private HostgrouptypeMapper hostgrouptypeMapper;
 	
 	@Override
 	public List<HostgroupVo> getgroupByAuth() {
@@ -37,21 +33,16 @@ public class HostgroupSvImpl implements IHostgroupSv {
          //将json对象转换成java对象
          ss = JSON.parseArray(string, HostgroupVo.class);
          //判断主机组的类型 1为虚机组 0为容器
-         int ll = 0;
-         int isnot = 0;
-         for (int i = 0; i < ss.size(); i++) {
-			ll = Integer.valueOf(ss.get(i).getGroupid());
-			isnot =Integer.valueOf(hostgrouptypeMapper.selectByGroupid(ll).getType());
-			if(isnot==1)
-				ss.remove(i);
-		}
+//         int ll = 0;
+//         int isnot = 0;
+//         for (int i = 0; i < ss.size(); i++) {
+//			ll = Integer.valueOf(ss.get(i).getGroupid());
+//			isnot =Integer.valueOf(hostgrouptypeMapper.selectByGroupid(ll).getType());
+//			if(isnot==1)
+//				ss.remove(i);
+//		}
          
 		return ss;
-	}
-	@Override
-	public Hostgrouptype gettyprBygroupID(int groupid) {
-		
-		return hostgrouptypeMapper.selectByGroupid(groupid);
 	}
 
 }

@@ -27,4 +27,11 @@ public class ItemApiImpl implements IItemApi {
 		return iItemSv.getItemsByHostID(hostid);
 	}
 
+	@Override
+	public List<ItemVo> getItemsByName(String name) {
+		
+		
+		return iItemSv.getItemsByName(name);
+	}
+
 }

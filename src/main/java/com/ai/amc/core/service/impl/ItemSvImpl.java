@@ -28,8 +28,14 @@ public class ItemSvImpl implements IItemSv {
 
 	@Override
 	public List<ItemVo> getItemsByHostID(String hostid) {
-		List<ItemVo> items =null;
-		items = JSON.parseArray(itemZabbixApi.getItemListByHostID(hostid).toString(), ItemVo.class);
+		List<ItemVo> items = JSON.parseArray(itemZabbixApi.getItemListByHostID(hostid).toString(), ItemVo.class);
+		return items;
+	}
+
+
+	@Override
+	public List<ItemVo> getItemsByName(String name) {
+		List<ItemVo> items = JSON.parseArray(itemZabbixApi.getItemListByName(name).toString(), ItemVo.class);
 		return items;
 	}
 

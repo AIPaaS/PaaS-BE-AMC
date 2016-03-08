@@ -9,4 +9,5 @@ public interface IItemApi {
 
 	JSONArray getItemListByHostID(String hostid);
 	List<ItemVo> getItemsByHostID(String hostid);
+	List<ItemVo> getItemsByName(String name);
 }

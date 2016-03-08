@@ -14,9 +14,9 @@ public class HistoryApiImpl implements IHistoryApi {
 	@Autowired
 	private IHistorySv iHistorySv;
 	@Override
-	public List<HistoryVo> getItemsByItemID(String itemid,String value_type) {
+	public List<HistoryVo> getItemsByItemID(String itemid,String value_type,int time) {
 		
-		return iHistorySv.getItemsByItemID(itemid,value_type);
+		return iHistorySv.getItemsByItemID(itemid,value_type,time);
 	}
 
 }

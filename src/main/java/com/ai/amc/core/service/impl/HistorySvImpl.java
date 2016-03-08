@@ -17,9 +17,9 @@ public class HistorySvImpl implements IHistorySv {
 	@Autowired
 	private HistoryZabbixApi historyZabbixApi;
 	@Override
-	public List<HistoryVo> getItemsByItemID(String itemid,String value_type) {
+	public List<HistoryVo> getItemsByItemID(String itemid,String value_type,int time) {
 		
-		JSONArray history = historyZabbixApi.getHistoyByItemID(itemid,value_type);
+		JSONArray history = historyZabbixApi.getHistoyByItemID(itemid,value_type,time);
 		List<HistoryVo> historylist = JSON.parseArray(history.toString(), HistoryVo.class);
 		return historylist;
 	}

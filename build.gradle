@@ -28,7 +28,7 @@ sourceSets {
 }
 
 ext {	
-	moduleName="paas-be-amc";
+	moduleName="paas-be-amc-be";
 	moduleVersion="0.1-SNAPSHOT"
 	publishUserName = "devadm"
 	publishUserPassword = "Devadm@1212"
@@ -38,7 +38,7 @@ ext {
 
 
 
-group = 'com.ai.amc'
+group = 'com.ai.amc.be'
 
 dependencies{
     compile 'org.springframework:spring-jdbc:3.2.5.RELEASE'	

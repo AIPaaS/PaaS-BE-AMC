@@ -4,10 +4,6 @@ import java.text.ParseException;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.ai.amc.core.po.DemoTable;
-import com.ai.amc.core.po.Sysuser;
-import com.ai.amc.core.rest.IDemoApi;
-import com.ai.amc.core.rest.SysuserApi;
 import com.ai.amc.core.vo.DemoTableVo;
 import com.ai.amc.test.springcontext.SpringContext;
 
@@ -32,11 +28,11 @@ public static void demoTest(){
 		System.out.println(",");
 	}*/
 	
-	SysuserApi sysuserApi = (SysuserApi) context.getBean("sysuserApiImpl");
-	Sysuser po = new Sysuser();
-	po = sysuserApi.selectByPrimaryKey(1);
+//	SysuserApi sysuserApi = (SysuserApi) context.getBean("sysuserApiImpl");
+//	Sysuser po = new Sysuser();
+//	po = sysuserApi.selectByPrimaryKey(1);
 	System.out.println("");
-	System.out.println("--------------------------"+po.getDname());
+//	System.out.println("--------------------------"+po.getDname());
 	
 }
 

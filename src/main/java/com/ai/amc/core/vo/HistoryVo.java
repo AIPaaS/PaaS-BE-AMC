@@ -29,14 +29,14 @@ public class HistoryVo implements Serializable{
 	public String getNewclock() {
 		Long oldc =this.getClock();
 		Date newc = new Date(oldc*1000);
-		SimpleDateFormat bartDateFormat =  new SimpleDateFormat("YYYY/MM/dd HH:mm:ss");
+		SimpleDateFormat bartDateFormat =  new SimpleDateFormat("YYYY/MM/dd HH:mm");
 		return bartDateFormat.format(newc);
 	}
 	public void setNewclock(String newclock) {
 		this.newclock = newclock;
 	}
 	public String getValue() {
-		return value;
+		return this.value;
 	}
 	public void setValue(String value) {
 		this.value = value;
@@ -50,7 +50,7 @@ public class HistoryVo implements Serializable{
 	@Override
 	public String toString() {
 		return "History [itemid=" + itemid + ", clock=" + clock + ", newclock="
-				+ this.getNewclock() + ", value=" + value  + "]";
+				+ this.getNewclock() + ", value=" + value  + "]"+this.getValue();
 	}
 	
 }

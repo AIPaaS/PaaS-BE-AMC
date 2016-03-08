@@ -15,7 +15,7 @@ public class ZabbixApiBase {
 	private static final Logger logger = LogManager
 			.getLogger(ZabbixApiBase.class.getName());
 	
-	public String Auth = BaseinfoConstants.AUTH;
+	public String Auth = BaseinfoConstants.getAuth();
 	
 	public JSONArray getJSONArray(Map<String, Object> map) throws Exception {
 		String param = JSON.toJSONString(map);
