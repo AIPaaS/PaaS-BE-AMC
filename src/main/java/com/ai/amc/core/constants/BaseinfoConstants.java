@@ -16,7 +16,8 @@ public class BaseinfoConstants {
 
         //请求zabbix接口的api地址
 	   // public static final String URL      = "http://10.1.31.18/api_jsonrpc.php";
-	   public static final String URL      = "http://10.1.242.201/api_jsonrpc.php"; 
+	 //public static final String URL      = "http://10.1.242.201/api_jsonrpc.php"; 
+	public static final String URL      = "http://10.1.130.5/api_jsonrpc.php";
 	    //zabbix用户的token 后期用NT账号换
 	  //  public static final String AUTH     = "687947605d8e44bfce23d776434dc351";
 	    
