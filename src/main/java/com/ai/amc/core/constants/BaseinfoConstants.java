@@ -13,10 +13,16 @@ import com.alibaba.fastjson.JSON;
  */
 public class BaseinfoConstants {
 
-
+	public static ConstManager constManager = ConstManagerFactory.getConstManagerImpl();
         //请求zabbix接口的api地址
 	   // public static final String URL      = "http://10.1.31.18/api_jsonrpc.php";
-	   public static final String URL      = "http://10.1.242.201/api_jsonrpc.php"; 
+	   public static final String ZABBIX_URL   = constManager.getString("zabbix.url"); 
+	   //ElasticSearch地址配置
+	   public static final String ES_URL = constManager.getString("es.url");
+	   public static final String ES_CLUSTERNAME = constManager.getString("es.clusterName");
+	   public static final String ES_INDEXNAME = constManager.getString("es.indexName");
+	   public static final String ES_USER = constManager.getString("es.user");
+	   public static final String ES_PASSWD = constManager.getString("es.passwd");
 	    //zabbix用户的token 后期用NT账号换
 	  //  public static final String AUTH     = "687947605d8e44bfce23d776434dc351";
 	    

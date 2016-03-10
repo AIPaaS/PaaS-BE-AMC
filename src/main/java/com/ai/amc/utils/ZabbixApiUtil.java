@@ -28,7 +28,7 @@ public class ZabbixApiUtil {
         StringBuffer sb = null;
         try {
             //创建连接
-            URL url = new URL(BaseinfoConstants.URL);
+            URL url = new URL(BaseinfoConstants.ZABBIX_URL);
             connection = (HttpURLConnection) url.openConnection();
             connection.setDoOutput(true);
             connection.setDoInput(true);
