@@ -105,6 +105,7 @@ public class EsDockerLogVo implements Comparable<EsDockerLogVo> ,Serializable{
 	public String toString() {
 		return "EsDockerLog [id=" + id +",timeStamp="+timeStamp+ ", type=" + type + ", payload="
 				+ payload + ", containerName=" + containerName+containerId + ", hostName=" + hostName+ ", containerImage=" + containerImage +"]";
+
 	}
 	
 }

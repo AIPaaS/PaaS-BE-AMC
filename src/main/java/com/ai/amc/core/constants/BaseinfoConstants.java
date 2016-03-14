@@ -32,6 +32,7 @@ public class BaseinfoConstants {
 	   public static final String ES_USER = constManager.getString("es.user");
 	   public static final String ES_PASSWD = constManager.getString("es.passwd");
 
+
 	public static final String getAuth() {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("user", USERNAME);

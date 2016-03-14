@@ -1,2 +1,8 @@
 /com
 /context
+/email
+/log4j.properties
+/log4j2.xml
+/mapper
+/mybatis.cfg.xml
+/spring
