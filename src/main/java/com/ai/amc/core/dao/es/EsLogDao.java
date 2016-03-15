@@ -1,6 +1,7 @@
 package com.ai.amc.core.dao.es;
 
 
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.elasticsearch.action.search.SearchRequestBuilder;
@@ -8,7 +9,6 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.sort.SortBuilders;
