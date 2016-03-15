@@ -31,8 +31,8 @@ public class EsLogSvImpl implements IEsLogSv {
 	     SearchHit[] searchHists = hits.getHits();
 	     if(searchHists.length>0){
              for(SearchHit hit:searchHists){
-	            	String payload = (String)hit.getSource().get("Payload");
-	                String timestamp =  (String) hit.getSource().get("@timestamp");
+	            	String payload = (String)hit.getSource().get("payload");
+	                String timestamp =  (String) hit.getSource().get("timestamp");
 	                String id =  (String) hit.getId();
 	                EsDockerLogVo vo = new EsDockerLogVo();
 	                vo.setPayload(payload);

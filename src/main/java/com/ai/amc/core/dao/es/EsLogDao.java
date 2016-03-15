@@ -7,6 +7,7 @@ import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHits;
@@ -26,16 +27,17 @@ public class EsLogDao {
 	public SearchHits getDockerLogRoll(String dockerName,String lastTime){
 		TransportClient client = ElasticSearchUtil.getTransportClient();
 		SearchRequestBuilder builder = client.prepareSearch(BaseinfoConstants.ES_INDEXNAME)
-		        .setSearchType(SearchType.DEFAULT)
-		        .setQuery(QueryBuilders.termQuery("ContainerName", dockerName));  // Query
+		        .setSearchType(SearchType.DEFAULT);
+		BoolQueryBuilder bqb = QueryBuilders.boolQuery().must(QueryBuilders.termQuery("ContainerName", dockerName));
         if(lastTime != null && lastTime.length() > 0){
-        	builder.setPostFilter(QueryBuilders.rangeQuery("@timestamp").from(lastTime));     // Filter
-        	builder.addSort(SortBuilders.fieldSort("@timestamp").order(SortOrder.ASC));
+        	bqb.must(QueryBuilders.rangeQuery("timestamp").from(lastTime));
+        	builder.addSort(SortBuilders.fieldSort("timestamp").order(SortOrder.ASC));
         	builder.setFrom(0).setSize(1000);
         }
-        builder.setPostFilter(QueryBuilders.existsQuery("@timestamp"));
+        builder.setQuery(bqb);
+        builder.setPostFilter(QueryBuilders.existsQuery("timestamp"));
         if(lastTime == null || lastTime.length() == 0){
-        	builder.addSort(SortBuilders.fieldSort("@timestamp").order(SortOrder.DESC));
+        	builder.addSort(SortBuilders.fieldSort("timestamp").order(SortOrder.DESC));
         	builder.setFrom(0).setSize(200);
         }
         builder.setExplain(true);
@@ -43,5 +45,6 @@ public class EsLogDao {
 		SearchHits hits = response.getHits();
 		return hits;
 	}
+
 	
 }
