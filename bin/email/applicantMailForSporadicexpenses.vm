@@ -1,0 +1,332 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>零星报销申请单</title>
+  <style class="fox_global_style"> div.fox_html_content { line-height: 1.5;} /* 一些默认样式 */ blockquote { margin-Top: 0px; margin-Bottom: 0px; margin-Left: 0.5em } ol, ul { margin-Top: 0px; margin-Bottom: 0px; list-style-position: inside; } p { margin-Top: 0px; margin-Bottom: 0px } </style> 
+ </head>
+ <body>
+  <div>
+   <span id="_FoxCURSOR"></span>
+   <br />
+  </div> 
+  <div>
+   <br />
+  </div>
+  <br />
+  <blockquote style="margin-top: 0px; margin-bottom: 0px; margin-left: 0.5em;">
+   <div>
+    <div class="FoxDiv20151215164907848379" id="FMOriginalContent">
+     <blockquote style="margin-top: 0px; margin-bottom: 0px; margin-left: 0.5em;">
+      <div>
+       <div class="FoxDiv20151215152525629757"> 
+        <table cellspacing="5" cellpadding="0" width="100%" border="0" style="font-size: x-small"> 
+         <tbody> 
+          <tr> 
+           <td>$!{last_name}，您好！</td> 
+          </tr> 
+          <tr> 
+           <td>&nbsp;&nbsp;&nbsp;&nbsp;您于$!{date_time}成功提交了一份零星报销申请（流水号：<font color="red">$!{amount_Number}</font>）。</td> 
+          </tr> 
+           <tr> 
+           <td></td> 
+          </tr> 
+          
+           <tr> 
+           <td>当前审批人：<span class="checkPeople">$!{approver_name}</span>联系方式(分机)： <span class="tel">$!{approverPerson_mobile}</span></td> 
+          </tr> 
+          <tr> 
+           <td><font color="red"><b>审批记录：</b></font><br />第1审批人 <span class="checkPeople">$!{approver_name}</span> 未审批<br /></td> 
+          </tr>  
+         <tr> 
+           <td></td> 
+          </tr> 
+          <tr> 
+           <td>如有问题，请与：<br />报销问题请直接联系审核会计（北京地区会计电话均为：010-8216XXXX，南京会计电话均为：025-8375XXXX）；系统问题，系统接口人：井宏坤 010-82166150<br />联系。<br /><br /><b><font color="red">发件人不会阅读此邮件，请不要直接回复此邮件</font></b><br /><br /></td> 
+          </tr> 
+          <tr> 
+           <td><a href=$!{asiaInfoAisseAddress}>亚信科技网上报销系统</a></td> 
+          </tr> 
+          <tr> 
+           <td></td> 
+          </tr> 
+          <tr> 
+           <td> 
+            <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+             <tbody>
+              <tr> 
+               <td height="7"> </td> 
+              </tr> 
+              <tr> 
+               <td class="OraHeader" style="font-size: 133%; color: rgb(51, 102, 153); font-weight: bold;"> 零星报销申请单 </td> 
+              </tr> 
+              <tr> 
+               <td height="1" class="OraBGAccentDark" style="background-color: rgb(204, 204, 153);"> </td> 
+              </tr> 
+              <tr> 
+               <td height="2"> </td> 
+              </tr> 
+             </tbody>
+            </table> 
+            <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+             <tbody>
+              <tr> 
+               <td height="10" colspan="2"></td> 
+              </tr> 
+              <tr> 
+               <td width="20"></td> 
+               <td class="OraHeaderSub" style="font-size: small; color: rgb(51, 102, 153); font-weight: bold;"> 基本信息 </td> 
+              </tr> 
+              <tr> 
+               <td width="20"></td> 
+               <td height="1" class="OraBGAccentDark" style="background-color: rgb(204, 204, 153);"></td> 
+              </tr> 
+              <tr> 
+               <td height="12" colspan="2"></td> 
+              </tr> 
+             </tbody>
+            </table>
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="90%"> 
+             <tbody>
+              <tr> 
+               <td width="13%" height="22">&nbsp;</td> 
+               <td class="OraPromptText" width="15%" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">员工编号</td> 
+               <td width="20">&nbsp;</td> 
+               <td class="OraDataText" width="20%" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{employee_number}</td> 
+               <td width="5%">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" width="15%" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">公司名称</td> 
+               <td width="20">&nbsp;</td> 
+               <td class="OraDataText" nowrap="" width="26%" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{company_name}</td> 
+               <td width="12">&nbsp;</td> 
+              </tr>
+              <tr> 
+               <td height="22">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">员工姓名</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{last_name}</td> 
+               <td>&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">地区</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{location}</td> 
+               <td>&nbsp;</td> 
+              </tr>
+              <tr> 
+               <td height="22">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">分机号码</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{office}</td> 
+               <td>&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">利润中心编码</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{sbu_id}</td> 
+               <td>&nbsp;</td> 
+              </tr>
+              <tr> 
+               <td height="22">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">结算币种</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{currency_type}</td> 
+               <td>&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">成本中心编码</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{costcenter_id}</td> 
+               <td>&nbsp;</td> 
+              </tr>
+              <tr> 
+               <td height="22">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">付款方式</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{payment_type}</td> 
+               <td>&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">行业</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{carrier_id}</td> 
+               <td>&nbsp;</td> 
+              </tr>
+              <tr> 
+               <td height="22">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">项目编码</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{project_code}</td> 
+               <td>&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">是否跨部门</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">$!{is_over_costcenter}</td> 
+               <td>&nbsp;</td> 
+              </tr> 
+              <tr> 
+               <td height="22">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">项目名称</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" colspan="6" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">!{}</td> 
+              </tr>
+              <tr> 
+               <td height="22">&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">任务号</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"></td> 
+               <td>&nbsp;</td> 
+               <td class="OraPromptText" nowrap="" style="font-size: x-small; text-align: right; color: rgb(0, 0, 0); font-weight: normal;">跨部门审批经理</td> 
+               <td></td> 
+               <td class="OraDataText" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"></td> 
+               <td>&nbsp;</td> 
+              </tr>
+             </tbody>
+            </table> 
+           
+            <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+             <tbody>
+              <tr> 
+               <td height="10" colspan="2"></td> 
+              </tr> 
+              <tr> 
+               <td width="20"></td> 
+               <td class="OraHeaderSub" style="font-size: small; color: rgb(51, 102, 153); font-weight: bold;"> 费用明细 </td> 
+              </tr> 
+              <tr> 
+               <td width="20"></td> 
+               <td height="1" class="OraBGAccentDark" style="background-color: rgb(204, 204, 153);"></td> 
+              </tr> 
+              <tr> 
+               <td height="12" colspan="2"></td> 
+              </tr> 
+             </tbody>
+            </table>
+            <table cellspacing="0" cellpadding="0" style="width:90%" align="center" border="0"> 
+             <tbody>
+              <tr> 
+               <td style="width:10;height:22"></td> 
+               <td class="OraFieldText" style="width: 6%; font-size: x-small; color: rgb(0, 0, 0);" align="center">序号</td> 
+               <td class="OraFieldText" style="width: 16%; font-size: x-small; color: rgb(0, 0, 0);" align="left">费用类型</td> 
+               <td class="OraFieldText" style="width: 10%; font-size: x-small; color: rgb(0, 0, 0);" align="left">报销月份</td> 
+               <td class="OraFieldText" style="width: 10%; font-size: x-small; color: rgb(0, 0, 0);" align="left">报销金额</td> 
+               <td class="OraFieldText" style="width: 10%; font-size: x-small; color: rgb(0, 0, 0);" align="left">成本金额</td> 
+               <td class="OraFieldText" style="width: 10%; font-size: x-small; color: rgb(0, 0, 0);" align="left">税金金额</td> 
+               <td class="OraFieldText" style="width: 9%; font-size: x-small; color: rgb(0, 0, 0);" align="left">发票号</td> 
+               <td class="OraFieldText" style="width: 8%; font-size: x-small; color: rgb(0, 0, 0);" align="left">费用币种</td> 
+               <td class="OraFieldText" style="width: 4%; font-size: x-small; color: rgb(0, 0, 0);" align="left">汇率</td> 
+               <td class="OraFieldText" style="width: 8%; font-size: x-small; color: rgb(0, 0, 0);" align="left">预算控制码</td> 
+               <td class="OraFieldText" style="width: 14%; font-size: x-small; color: rgb(0, 0, 0);" align="left">付款用途</td> 
+              </tr>
+              $!{costDetail}
+              
+              <tr> 
+               <td colspan="3" height="22"></td> 
+               <td class="OraDataText" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">报销合计金额：</td> 
+               <td class="OraDataText" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"><font color="#336699">889.70</font></td> 
+               <td colspan="7">&nbsp;</td> 
+              </tr> 
+              <tr> 
+               <td colspan="3" height="22"></td> 
+               <td class="OraDataText" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">结算合计金额：</td> 
+               <td class="OraDataText" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"><font color="#336699">889.70</font></td> 
+               <td colspan="7">&nbsp;</td> 
+              </tr>
+             </tbody>
+            </table> 
+             <!-- 11111111111111111111111111111111111111 -->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="display: $!{itemHead}">
+             <tbody>
+              <tr>
+               <td height="10" colspan="2"></td>
+              </tr>
+              <tr>
+               <td width="20"></td>
+               <td class="OraHeaderSub" style="font-size: small; color: rgb(51, 102, 153); font-weight: bold;"> 工作餐费用明细 </td>
+              </tr>
+              <tr>
+               <td width="20"></td>
+               <td height="1" class="OraBGAccentDark" style="background-color: rgb(204, 204, 153);"></td>
+              </tr>
+              <tr>
+               <td height="12" colspan="2"></td>
+              </tr>
+             </tbody>
+            </table>
+				
+				
+			  <table cellspacing="0" cellpadding="0" width="90%" align="center" border="0" style="display:!${itemListshow}">
+             <tbody>
+              <tr>
+               <td align="center" class="OraFieldText" height="22" width="6%" style="font-size: x-small; color: rgb(0, 0, 0);">序号</td>
+               <td align="left" class="OraFieldText" width="10%" style="font-size: x-small; color: rgb(0, 0, 0);">报销金额</td>
+               <td align="left" class="OraFieldText" width="5%" style="font-size: x-small; color: rgb(0, 0, 0);">用餐人数</td>
+               <td align="left" class="OraFieldText" width="5%" style="font-size: x-small; color: rgb(0, 0, 0);">用餐次数</td>
+               <td align="left" class="OraFieldText" width="11%" style="font-size: x-small; color: rgb(0, 0, 0);">是否有外部协作单位</td>
+               <td align="left" class="OraFieldText" width="39%" style="font-size: x-small; color: rgb(0, 0, 0);">用餐人员</td>
+               <td align="left" class="OraFieldText" width="10%" style="font-size: x-small; color: rgb(0, 0, 0);">日期</td>
+               <td align="left" class="OraFieldText" width="6%" style="font-size: x-small; color: rgb(0, 0, 0);">假日</td>
+               <td align="left" class="OraFieldText" width="10%" style="font-size: x-small; color: rgb(0, 0, 0);">工作事由</td>
+              </tr>
+               		$!{itemlistDetail}
+              <tr>
+               <td class="OraDataText" height="22" align="left" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">合计金额</td>
+               <td class="OraDataText" height="22" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"><font color="#336699">$!{itemTotalAmount}</font></td>
+               <td class="OraDataText" height="22" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"></td>
+               <td class="OraDataText" height="22" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"><font color="#336699"></font></td>
+               <td class="OraDataText" height="22" colspan="4" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">&nbsp;</td>
+              </tr>
+             </tbody>
+            </table>
+              <!-- 11111111111111111111111111111111111111 -->
+            	
+        	 <!--222222222222222222222222222222222222222222  -->    
+           	 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="display:$!{trafficHead}">
+             <tbody>
+              <tr>
+               <td height="10" colspan="2"></td>
+              </tr>
+              <tr>
+               <td width="20"></td>
+               <td class="OraHeaderSub" style="font-size: small; color: rgb(51, 102, 153); font-weight: bold;"> 市内交通费明细 </td>
+              </tr>
+              <tr>
+               <td width="20"></td>
+               <td height="1" class="OraBGAccentDark" style="background-color: rgb(204, 204, 153);"></td>
+              </tr>
+              <tr>
+               <td height="12" colspan="2"></td>
+              </tr>
+             </tbody>
+   			</table>
+   			
+   			 <table cellspacing="0" cellpadding="0" width="90%" align="center" border="0" style="display:$!{trafficListshow}>
+             <tbody>
+              <tr>
+               <td class="OraFieldText" height="22" width="40" align="center" style="font-size: x-small; color: rgb(0, 0, 0);">序号</td>
+               <td class="OraFieldText" width="80" align="left" style="font-size: x-small; color: rgb(0, 0, 0);">日期</td>
+               <td class="OraFieldText" width="100" align="left" style="font-size: x-small; color: rgb(0, 0, 0);">起始地点</td>
+               <td class="OraFieldText" height="22" width="100" align="left" style="font-size: x-small; color: rgb(0, 0, 0);">到达地点</td>
+               <td class="OraFieldText" height="22" width="50" align="left" style="font-size: x-small; color: rgb(0, 0, 0);">里程</td>
+               <td class="OraFieldText" height="22" width="50" align="left" style="font-size: x-small; color: rgb(0, 0, 0);">金额</td>
+               <td class="OraFieldText" height="22" align="left" style="font-size: x-small; color: rgb(0, 0, 0);">工作事由</td>
+              </tr>
+               
+               
+               $!{trafficlistDetail}
+               
+              <tr>
+               <td class="OraDataText" height="22" nowrap="" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">&nbsp;</td>
+               <td class="OraDataText" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">&nbsp;</td>
+               <td class="OraDataText" height="22" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">&nbsp;</td>
+               <td class="OraDataText" height="22" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">&nbsp;</td>
+               <td class="OraDataText" height="22" align="left" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">合计金额</td>
+               <td class="OraDataText" height="22" align="right" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);"><font color="#336699">$!{trafficTotalAmount}</font></td>
+               <td class="OraDataText" height="22" style="font-size: x-small; font-weight: bold; color: rgb(0, 0, 0);">&nbsp;</td>
+              </tr>
+             </tbody>
+            </table>
+            	
+			 <!--222222222222222222222222222222222222222222  -->
+            
+            </td> 
+          </tr> 
+         </tbody> 
+        </table>
+       </div>
+      </div>
+     </blockquote> 
+    </div>
+   </div>
+  </blockquote>
+ </body>
+</html>

@@ -12,6 +12,7 @@ import com.ai.amc.core.po.Trends;
 import com.ai.amc.core.po.TrendsKey;
 import com.ai.amc.core.po.Trends_uint;
 import com.ai.amc.core.po.Trends_uintKey;
+import com.ai.amc.core.rest.IEsLogApi;
 import com.ai.amc.core.rest.IHistoryApi;
 import com.ai.amc.core.rest.IHostApi;
 import com.ai.amc.core.rest.IHostgroupApi;
@@ -20,6 +21,7 @@ import com.ai.amc.core.rest.ITestHostApi;
 import com.ai.amc.core.rest.ITrendsApi;
 import com.ai.amc.core.rest.ITrends_uintApi;
 import com.ai.amc.core.rest.UserTokenApi;
+import com.ai.amc.core.vo.EsDockerLogVo;
 import com.ai.amc.core.vo.HistoryVo;
 import com.ai.amc.core.vo.HostVo;
 import com.ai.amc.core.vo.HostgroupVo;
@@ -52,7 +54,7 @@ public static void demoTest(){
 	}*/
 	
 	//IItemApi object =(IItemApi) context.getBean("itemApiImpl");
-	IHistoryApi object =(IHistoryApi) context.getBean("historyApiImpl");
+	//IHistoryApi object =(IHistoryApi) context.getBean("historyApiImpl");
 	//Object str = new ArrayList<HistoryVo>();
 	 //ITestHostApi object =(ITestHostApi) context.getBean("testHostApiImpl");
 	// IHostApi object =(IHostApi) context.getBean("hostApiImpl");
@@ -62,11 +64,13 @@ public static void demoTest(){
 	//List<Trends_uint> str = new ArrayList<Trends_uint>();
 	//Trends_uintKey key = new Trends_uintKey();
 	//TrendsKey key = new TrendsKey();
-	List<HistoryVo> str = new ArrayList<HistoryVo>();
+	IEsLogApi object =(IEsLogApi) context.getBean("esLogApiImpl");
+	List<EsDockerLogVo> str = new ArrayList<EsDockerLogVo>();
+	//List<HistoryVo> str = new ArrayList<HistoryVo>();
 	//List<HistoryVo> str = new ArrayList<HistoryVo>();
 	try {
-		//str =  object.getItemsByName("adoring_hodgkin:Free memory");
-		str = object.getItemsByItemID("30795", "0", 600);
+		str =  object.getDockerLogRoll("cadvisor", null, null);
+		//str = object.getItemsByItemID("30795", "0", 600);
 		//str = object.getItemsByName("prickly_liskov:Used memory");
 		//str = object.getItemsByItemID("30795", "0", 60);
 		//str =  object.getItemsByHostID("10274");

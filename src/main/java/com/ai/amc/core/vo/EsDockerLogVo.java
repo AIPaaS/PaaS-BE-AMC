@@ -1,7 +1,13 @@
 package com.ai.amc.core.vo;
 
-public class EsDockerLogVo implements Comparable<EsDockerLogVo>{
+import java.io.Serializable;
 
+public class EsDockerLogVo implements Comparable<EsDockerLogVo> ,Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String timeStamp;
 	private String type;
@@ -94,6 +100,12 @@ public class EsDockerLogVo implements Comparable<EsDockerLogVo>{
 		}else{
 			return this.timeStamp.compareTo(o.timeStamp);
 		}
+	}
+	@Override
+	public String toString() {
+		return "EsDockerLog [id=" + id +",timeStamp="+timeStamp+ ", type=" + type + ", payload="
+				+ payload + ", containerName=" + containerName+containerId + ", hostName=" + hostName+ ", containerImage=" + containerImage +"]";
+
 	}
 	
 }
