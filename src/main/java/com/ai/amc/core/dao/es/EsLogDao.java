@@ -1,13 +1,13 @@
 package com.ai.amc.core.dao.es;
 
 
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.sort.SortBuilders;
@@ -29,7 +29,7 @@ public class EsLogDao {
 		        .setSearchType(SearchType.DEFAULT)
 		        .setQuery(QueryBuilders.termQuery("ContainerName", dockerName));  // Query
         if(lastTime != null && lastTime.length() > 0){
-        	builder.setPostFilter(QueryBuilders.rangeQuery("@timestamp").from(lastTime));     // Filter
+        	builder.setQuery(QueryBuilders.rangeQuery("@timestamp").from(lastTime));     // Filter
         	builder.addSort(SortBuilders.fieldSort("@timestamp").order(SortOrder.ASC));
         	builder.setFrom(0).setSize(1000);
         }
