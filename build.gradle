@@ -101,8 +101,8 @@ dependencies{
 	
 	compile 'com.ai:ipaas-mcs:0.2'
 	
-	
-	
+	compile 'org.elasticsearch:elasticsearch:2.2.0'
+	compile 'com.google.guava:guava:18.0'
 	compile 'com.alibaba:fastjson:1.2.4'
 	compile 'org.mybatis:mybatis:3.3.0'
 	compile 'org.mybatis:mybatis-spring:1.2.3'
