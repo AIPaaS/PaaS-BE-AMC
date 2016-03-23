@@ -1,9 +1,5 @@
 #
-<<<<<<< remotes/origin/develop
-#Fri Mar 04 10:57:54 CST 2016
-=======
-#Wed Mar 16 16:45:40 CST 2016
->>>>>>> local
+#Tue Mar 22 19:45:56 CST 2016
 org.eclipse.jdt.core.compiler.debug.localVariable=generate
 org.eclipse.jdt.core.compiler.compliance=1.7
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve

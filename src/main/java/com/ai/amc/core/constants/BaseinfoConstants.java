@@ -31,8 +31,15 @@ public class BaseinfoConstants {
 	   public static final String ES_INDEXNAME = constManager.getString("es.indexName");
 	   public static final String ES_USER = constManager.getString("es.user");
 	   public static final String ES_PASSWD = constManager.getString("es.passwd");
+	   public static final String ES_LOG_FILE_FIELD = constManager.getString("es.applog.field.logfilepath");
 
-
+	//ES应用日志查询类型
+	   public static final int ES_APP_LOG_FRONT = 1;
+	   public static final int ES_APP_LOG_BACK = -1;
+	   public static final int ES_APP_LOG_NORMAL = 0;
+	   
+	   
+	   
 	public static final String getAuth() {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("user", USERNAME);

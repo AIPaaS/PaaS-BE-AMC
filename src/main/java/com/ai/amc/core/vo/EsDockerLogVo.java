@@ -20,7 +20,14 @@ public class EsDockerLogVo implements Comparable<EsDockerLogVo> ,Serializable{
 	private String containerName;
 	private String containerImage;
 	private String uuid;
+	private String filePath;
 	
+	public String getFilePath() {
+		return filePath;
+	}
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
 	public String getUuid() {
 		return uuid;
 	}
