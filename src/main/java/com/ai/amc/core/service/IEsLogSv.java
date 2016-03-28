@@ -9,9 +9,21 @@ import com.ai.amc.core.vo.EsDockerLogVo;
 
 public interface IEsLogSv {
 
+	/**
+	 * 获取标准日志
+	 * @param dockerName 容器名称 （必填）
+	 * @param lastId 最后的ID（可为空）
+	 * @param lastTime最后的时间（可为空）
+	 * @return
+	 */
 	public List<EsDockerLogVo> getDockerLogRoll(String dockerName,
 			String lastId, String lastTime);
 	
+	/**
+	 * 获取日志源
+	 * @param containerName 容器名称 （必填）
+	 * @return
+	 */
 	public List<String> getFilePathListByContainer(String containerName);
 	
 	/**

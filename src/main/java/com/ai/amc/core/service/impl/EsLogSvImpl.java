@@ -78,11 +78,11 @@ public class EsLogSvImpl implements IEsLogSv {
 	     if(searchHists.length>0){
              for(SearchHit hit:searchHists){
             	 	String payload = "";
-            	 	if(highLight){
+            	 	if(highLight&&keyword!=null&&keyword.length()>0){
             	 		Map<String, HighlightField> hf = hit.highlightFields();
                 	 	Text[] f = hf.get("payload").getFragments();
                 	 	for (int i = 0; i < f.length; i++) {
-                	 		payload += f.toString();
+                	 		payload += f[i].toString();
     					}
             	 	}else{
             	 		payload = (String) hit.getSource().get("payload");

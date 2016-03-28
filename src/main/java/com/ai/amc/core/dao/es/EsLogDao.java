@@ -32,7 +32,10 @@ public class EsLogDao {
 
 	private static final Logger logger = LogManager.getLogger(EsLogDao.class
 			.getName());
-
+    /** 获取标准日志
+     *
+     * 入参： 容器名  最后一次取日志的时间 
+     **/
 	public SearchHits getDockerLogRoll(String dockerName, String lastTime) {
 		TransportClient client = ElasticSearchUtil.getTransportClient();
 		SearchRequestBuilder builder = client.prepareSearch(
@@ -58,7 +61,16 @@ public class EsLogDao {
 		SearchHits hits = response.getHits();
 		return hits;
 	}
-
+	 /* 获取容器内的日志源
+     *   入参： 容器名
+     *  利用了聚合方法 BaseinfoConstants.ES_LOG_FILE_FIELD 相当于es里的一个字段  日志的存放地址
+     *  agg1 相当于result  传进去是什么 出来就是什么
+     */
+	/**
+	 * 获取容器内的日志源
+	 * @param containerName 容器名
+	 * @return
+	 */
 	public Terms getAppLogPath(String containerName) {
 		TransportClient client = ElasticSearchUtil.getTransportClient();
 		SearchRequestBuilder builder = client.prepareSearch(
@@ -71,11 +83,23 @@ public class EsLogDao {
 		builder.setQuery(bqb);
 		builder.addAggregation(AggregationBuilders.terms("agg1").field(
 				BaseinfoConstants.ES_LOG_FILE_FIELD));
+		builder.setSize(0);
 		SearchResponse response = builder.execute().actionGet();
 		Terms hits = response.getAggregations().get("agg1");
 		return hits;
 	}
 
+	/**
+	 * 得到应用日志
+	 * @param containerName 容器名
+	 * @param keyword  关键字
+	 * @param filePaths  日志源 支持多个
+	 * @param startTime  开始时间
+	 * @param endTime    终止时间
+	 * @param queryType  日志类型  支持全部 向前 向后
+	 * @param logTime    翻页的最后一个时间
+	 * @return
+	 */
 	public SearchHits getAppLogRoll(String containerName, String keyword,String[] filePaths
 			,String startTime,String endTime,int queryType,String logTime) {
 		TransportClient client = ElasticSearchUtil.getTransportClient();
@@ -96,7 +120,7 @@ public class EsLogDao {
 				bqb.must(QueryBuilders.rangeQuery("timestamp").from(startTime).to(endTime));
 			}
 			builder.addSort(SortBuilders.fieldSort("timestamp").order(
-					SortOrder.DESC));
+					SortOrder.ASC));
 		}else if(queryType == BaseinfoConstants.ES_APP_LOG_BACK){
 			bqb.must(QueryBuilders.rangeQuery("timestamp").to(logTime));
 			builder.addSort(SortBuilders.fieldSort("timestamp").order(
